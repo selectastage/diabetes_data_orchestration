@@ -8,10 +8,9 @@ if sys.version_info[0] < 3:
 else:
     from io import StringIO # Python 3.x
     
-aws_access_key_id='ASIARPLJXAZNTWQWBFUT'
-aws_secret_access_key= 'PUT7n9bI2/7wr72IeyoqjEUONylsFGo6fLQWbRKZ'
-aws_session_token= 'FwoGZXIvYXdzEOL//////////wEaDH/W8FATz/rDimhR7SK/AXSMJrDcwKutwcc6PcXHduR2gI7xjS1nfTZvECZFlbL4vEVEhgI3OB+ar3uKa5nCwv3LdAEj1aNx1rrGLjQJAQQOlOde3hq7OdlqTij5qZLf2+G4c5HIc+FCskAdRKEYSZauPcHCb6L1gfG6TUWaO9nEyKrhmh525gaSbnU68zWDyW+Tldbp69pFgUpn0APX6tbBMDFvUQn31CDHN0lXa9z8KHlWyEDyrUrlzGL6/gO3gWDotLAPJOfMSohhoHIRKIzS8JEGMi3F9rUr29BhecynXx6NXGEujC9AcjaRWgVvq0xPoL4M272ackkKuODppIDiWFQ='
-
+#aws_access_key_id=
+#aws_secret_access_key=
+#aws_session_token= 
 
 s3 = boto3.resource('s3',
                     aws_access_key_id= aws_access_key_id,
