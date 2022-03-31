@@ -1,4 +1,4 @@
-import boto3
+'''import boto3
 import pandas as pd
 import boto3
 import sys
@@ -37,4 +37,4 @@ def lambda_handler():
     
     
 if __name__ == 'main':
-    lambda_handler()
+    lambda_handler()'''
