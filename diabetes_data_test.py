@@ -30,7 +30,6 @@ df = pd.DataFrame.from_records(diabetes_fields[1:], columns=diabetes_fields[0])
 
 print(print(df.head))
 
-
 fields = {
   "StudyFields":{
     "APIVrs":"1.01.05",

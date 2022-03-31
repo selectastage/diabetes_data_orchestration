@@ -3,7 +3,6 @@ import requests
 import csv
 import re
 
-
 def request_ct(url):
     """Performs a get request that provides a (somewhat) useful error message."""
     try:
@@ -15,11 +14,9 @@ def request_ct(url):
     else:
         return response
 
-
 def json_handler(url):
     """Returns request in JSON (dict) format"""
     return request_ct(url).json()
-
 
 def csv_handler(url):
     """Returns request in CSV (list of records) format"""
