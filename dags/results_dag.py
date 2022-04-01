@@ -1,10 +1,12 @@
 import datetime
 from client import ClinicalTrials
 import pandas as pd
-ct = ClinicalTrials()
-import airflow
 from airflow.models import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
+
+#python_operator import PythonOperator
+
+ct = ClinicalTrials()
 
 
 DAG = DAG(
@@ -32,7 +34,7 @@ def api_call(**context):
 fetch_csv_fields = PythonOperator(
     task_id='fetch_csv_fields',
     python_callable=api_call,
-    provide_context=True,
+    #provide_context=True,
     dag=DAG)
 
 
@@ -45,11 +47,8 @@ def read_data(**kwargs):
 pull_data = PythonOperator(
     task_id='pull_data',
     python_callable=read_data,
-    provide_context=True,
+    #provide_context=True,
     dag=DAG)
-
-
-
 
 
 fetch_csv_fields >> pull_data
