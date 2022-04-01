@@ -42,6 +42,7 @@ def read_data(**kwargs):
     ti = kwargs['ti']
     fields = ti.xcom_pull(task_ids='fetch_csv_fields', key='diabetes_fields')
     df = pd.DataFrame.from_records(fields[1:], columns=fields[0])
+    print(df.head)
 
 
 pull_data = PythonOperator(
